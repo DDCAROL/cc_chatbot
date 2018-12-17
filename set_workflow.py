@@ -25,7 +25,7 @@ def set_temp(payload, recipient_id):  # simple wrapper for logging to stdout on 
 
     elif payload == 'OWNER_NO' :
         faq = template_json.Template_json(recipient_id,template_type=3,
-              text = "不好吃？", payload_yes = "GOT_IT", payload_no = "ROLL_BACK" )
+              text = "下次見吧！", payload_yes = "GOT_IT", payload_no = "ROLL_BACK" )
 
     else :
         faq = template_json.Template_json(recipient_id,template_type=2,
