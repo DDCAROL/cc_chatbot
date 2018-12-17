@@ -12,7 +12,15 @@ def handle_message(message_text, sender_id):
         if len(message_text ) < 10:
             return '你好！🙂\n請問我能為您做些什麼？ '
 
+     #love
+     if '女友' in message_text or '男友' in message_text :
+         if '交' in message_text or '配對' in message_text or '有' in message_text
+             faq = template_json.Template_json(sender_id,template_type=2, #yes/no button
+                    text="是否曾吃過屎？", payload_yes = "START_STATE_YES", payload_no = "START_STATE_NO" )
+             return faq
 
+         return '請參考鄉民激推5款交友app https://www.ettoday.net/dalemon/post/36746 '
+    
     #閒聊
 
     if len( message_text ) < 28 :
