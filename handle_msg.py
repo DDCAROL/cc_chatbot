@@ -12,8 +12,25 @@ def handle_message(message_text, sender_id):
         if len(message_text ) < 10:
             return '你好！🙂\n請問我能為您做些什麼？ '
     
-    #閒聊
+    #dorm
+    if '宿網' in message_text or '宿舍網路' in message_text :
+        if 'p2p' in message_text :
+            return '因使用P2P有侵權問題, 本校校園網路禁止使用P2P, 故本校宿網亦禁止使用P2P, 除非是特殊學術用途之使用, 可另行申請.🙂'
+        if '故障' in message_text or '網路孔' in message_text:
+            return '若確認網路有故障，麻煩至http://dorm.cc.ncku.edu.tw/ 進行使用者登入後進行故障申告，會由工程師為你處理，請耐心等候🙂'
+        if 'authentication failed' in message_text :
+            return '出現 "Authentication failed." 訊息, 有二種可能: \n1. 帳號或密碼輸入錯誤，請重新輸入再試一下。若不確定是否正確，可借室友電腦登入宿網管理系統看看。 \n2. 帳號被停用，登入宿網管理系統，查詢登錄資料，若被停用，在最後一項”特殊限制”中，會註明停用原因。'
+        if '不通' in message_text or '不能' in message_text or '斷' in message_text or '認證' in message_text or '連' in message_text or '無法' in message_text or '問題' in message_text:
+            faq = template_json.Template_json(sender_id,template_type=2,
+                   text="是否曾申請過帳號呢? (請用是/否按扭回答以便記錄)", payload_yes = "START_STATE_YES", payload_no = "START_STATE_NO" )
+            return faq
 
+        return '請參考宿網管理系統FAQ http://dorm.cc.ncku.edu.tw/ '
+
+    if '資安' in message_text :
+        return '若您需要填寫資安通報，可以先從 https://goo.gl/YzegaO 這裡下載通報檔案，填寫完後直接回傳至security@mail.ncku.edu.tw 這個信箱，或是繳交紙本到計網中心一樓🙂'
+    
+    #閒聊
     if len( message_text ) < 28 :
         if '謝謝' in message_text or '感謝' in message_text :
             return '很高興能為您幫上忙～ 😀'
