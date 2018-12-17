@@ -12,17 +12,14 @@ def handle_message(message_text, sender_id):
         if len(message_text ) < 10:
             return '你好！🙂\n請問我能為您做些什麼？ '
     
-    #dorm
-    if '宿網' in message_text or '宿舍網路' in message_text :
-        if '不通' in message_text or '不能' in message_text or '斷' in message_text or '認證' in message_text or '連' in message_text or '無法' in message_text or '問題' in message_text:
+    #love
+    if '男友' in message_text or '女友' in message_text :
+        if '交' in message_text or '配對' in message_text or '想' in message_text or '陪' in message_text:
             faq = template_json.Template_json(sender_id,template_type=2,
-                   text="是否曾申請過帳號呢? (請用是/否按扭回答以便記錄)", payload_yes = "START_STATE_YES", payload_no = "START_STATE_NO" )
+                   text="是否曾吃過屎", payload_yes = "START_STATE_YES", payload_no = "START_STATE_NO" )
             return faq
 
-        return '請參考宿網管理系統FAQ http://dorm.cc.ncku.edu.tw/ '
-
-    if '資安' in message_text :
-        return '若您需要填寫資安通報，可以先從 https://goo.gl/YzegaO 這裡下載通報檔案，填寫完後直接回傳至security@mail.ncku.edu.tw 這個信箱，或是繳交紙本到計網中心一樓🙂'
+        return '請參考台灣10大交友APP https://ibuyranking.blogspot.com/2018/03/xd.html '
     
     #閒聊
     if len( message_text ) < 28 :
