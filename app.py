@@ -79,7 +79,7 @@ def webhook():
                                     send_message( sender_id, '很高興能為你幫上忙🙂' ) #response(in the end)
                                 elif payload == 'ROLL_BACK' :
                                     faq = template_json.Template_json(sender_id,template_type=2,
-                                          text="是否曾申請過帳號呢? (請用是/否按扭回答以便記錄)", payload_yes = "START_STATE_YES", payload_no = "START_STATE_NO" )
+                                          text="ok?", payload_yes = "START_STATE_YES", payload_no = "START_STATE_NO" )
                                     send_template_message( faq )
                                 else :
                                     reply = set_temp(payload, sender_id)
