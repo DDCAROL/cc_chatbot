@@ -4,7 +4,7 @@ class Template_json :
         self.text= text
         self.payload_yes = payload_yes
         self.payload_no = payload_no
-        if template_type == 1 :
+        if template_type == 1 : 
             self.template = {
                         "recipient": {
                         "id": sender_id
@@ -21,7 +21,7 @@ class Template_json :
                                     }
                     }
 
-        if template_type == 2:
+        if template_type == 2: #button
             self.template ={
                 "recipient":
                 {
@@ -44,7 +44,7 @@ class Template_json :
                     ]
                 }
             }
-        if template_type == 3:
+        if template_type == 3: #button
             self.template ={
                 "recipient":
                 {
