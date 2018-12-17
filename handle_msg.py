@@ -26,10 +26,4 @@ def handle_message(message_text, sender_id):
         if '天氣' in message_text :
             return '這裡有最新的天氣狀況哦🙂 https://tw.news.yahoo.com/weather/'
 
-        if '唱歌' in message_text :
-            return '我不會唱歌，但我可以給你youtube哦！！🙂  https://www.youtube.com/'
-
-        if '你是誰' in message_text :
-            return '我是可愛的機器人'
-
     return '抱歉> < 我還無法處理這個問題，請您等待專人為您回答🙂 '
