@@ -4,7 +4,7 @@ import template_json
 def set_temp(payload, recipient_id):  # simple wrapper for logging to stdout on heroku
 
     if payload == 'START_STATE_NO' :
-        faq = template_json.Template_json(recipient_id,template_type=2,
+        faq = template_json.Template_json(recipient_id,template_type=2, #yes/no button
               text = "請問是自己的電腦嗎?", payload_yes = "OWNER_YES", payload_no = "OWNER_NO" )
 
     elif payload == 'START_STATE_YES' :
@@ -12,7 +12,7 @@ def set_temp(payload, recipient_id):  # simple wrapper for logging to stdout on 
               text = "請問是在自己的座位上嗎?", payload_yes = "ACC_OWN_SEAT_YES", payload_no = "ACC_OWN_SEAT_NO" )
 
     elif payload == 'ACC_OWN_SEAT_NO' :
-        faq = template_json.Template_json(recipient_id,template_type=3,
+        faq = template_json.Template_json(recipient_id,template_type=3, #another button
               text = "請用您自己的學號及密碼於宿網管理系統申請臨時使用", payload_yes = "GOT_IT", payload_no = "ROLL_BACK" )
 
     elif payload == 'ACC_OWN_SEAT_YES' :
