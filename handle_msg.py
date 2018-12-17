@@ -21,7 +21,6 @@ def handle_message(message_text, sender_id):
 
         return '請參考鄉民激推5款交友app https://www.ettoday.net/dalemon/post/36746 '
 
-
     #閒聊
 
     if len( message_text ) < 28 :
