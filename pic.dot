@@ -1,12 +1,21 @@
 digraph pic { 
-	user -> state1
-	state1 -> user
-	user -> state2
-	state2 -> user
-	user -> state3
-	state3 -> user
-	state3 -> state3_2
-	state3_2 -> state3_3
-	state3_3 -> user
+	label="FSM"
+	user
+	state1
+	state2
+	state3
+	state3_2
+	state3_3
+
+	user -> state1[label="嗨"]
+	state1 -> user[label="你好！🙂\n請問我能為您做些什麼？"]
+	user -> state2[label="天氣"]
+	state2 -> user[label="這裡有最新的天氣狀況哦🙂 https://tw.news.yahoo.com/weather/"]
+	user -> state3[label="男友" color=blue]
+	user -> state3[label="配對女友"]
+	state3 -> user[label="請參考台灣10大交友APP https://ibuyranking.blogspot.com/2018/03/xd.html" color=blue]
+	state3 -> state3_2[label="是"]
+	state3_2 -> state3_3[label="是"]
+	state3_3 -> user[label="是"]
 
 }
