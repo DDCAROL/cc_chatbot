@@ -1,0 +1,12 @@
+digraph pic { 
+	user -> state1
+	state1 -> user
+	user -> state2
+	state2 -> user
+	user -> state3
+	state3 -> user
+	state3 -> state3_2
+	state3_2 -> state3_3
+	state3_3 -> user
+
+}
