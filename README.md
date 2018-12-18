@@ -1,14 +1,23 @@
 # Facebook Messenger Bot
 This is a simple python template that uses Flask to build a webhook for Facebook's Messenger Bot API.
 
-Read more in my [tutorial that uses this repository](https://blog.hartleybrody.com/fb-messenger-bot/).
+[reference](https://blog.hartleybrody.com/fb-messenger-bot/).
 
-## "Callback verification failed"
+# FSM
 
-![Facebook Error](https://cloud.githubusercontent.com/assets/18402893/21538944/f96fcd1e-cdc7-11e6-83ee-a866190d9080.png)
 
-The #1 error that gets reported in issues is that facebook returns an error message (like above) when trying to add the heroku endpoint to your facebook chat application.
 
-Our flask application intentionally returns a 403 Forbidden error if the token that facebook sends doesn't match the token you set using the heroku configuration variables.
+# How to Run & Interact with My Chatbot
+Basic Chatbot Deploy: Heroku
 
-If you're getting this error, it likely means that you didn't set your heroku config values properly. Run `heroku config` from the command line within your application and verify that there's a key called `VERIFY_TOKEN` that has been set, and that it's set to the same value as what you've typed into the window on facebook.
+mac終端機指令｜
+
+  1. heroku login
+  2. git init
+  3. heroku git:remote -a cryptic-ravine-2726
+  4. git commit -am "chatbot haha"
+  5. git push heroku master
+  
+聊天機器人｜
+
+  我做的是一個打屁機器人，只要和它說話都會回答。但主要要用這幾句話，才會開始回應有內容：「嗨」、「配對女友」、「天氣」，不然其他都是回應一樣的。
