@@ -1,7 +1,7 @@
 # Facebook Messenger Bot
 This is a simple python template that uses Flask to build a webhook for Facebook's Messenger Bot API.
 
-[my reference](https://blog.hartleybrody.com/fb-messenger-bot/)
+[Reference](https://blog.hartleybrody.com/fb-messenger-bot/).
 
 # FSM
 
