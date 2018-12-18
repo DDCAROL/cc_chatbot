@@ -8,7 +8,7 @@ def handle_message(message_text, sender_id):
     if '不是我要的答案' in message_text :
         return '請您等待專人為您回答🙂  '
 
-    if '你好' in message_text or '請問' in message_text or '嗨' in message_text or '哈囉' in message_text or 'hi' in message_text or 'hello' in message_text:
+    if '嗨' in message_text :
         if len(message_text ) < 10:
             return '你好！🙂\n請問我能為您做些什麼？ '
     
