@@ -26,4 +26,4 @@ def handle_message(message_text, sender_id):
         if '天氣' in message_text :
             return '這裡有最新的天氣狀況哦🙂 https://tw.news.yahoo.com/weather/'
 
-    return '抱歉> < 我還無法處理這個問題，請您等待專人為您回答🙂 '
+    return '抱歉>＿<\n我還無法處理這個問題，掰掰🙂 '
