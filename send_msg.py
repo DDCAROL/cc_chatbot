@@ -38,8 +38,8 @@ def send_message(recipient_id, message_text):
                     "buttons":[
                         {
                             "type":"postback",
-                            "title":"不是我要的答案!",
-                            "payload":"不是我要的答案!"
+                            "title":"不是我要的答案",
+                            "payload":"不是我要的答案"
                         }
                         ]
                 }
