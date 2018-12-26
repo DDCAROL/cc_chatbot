@@ -11,6 +11,10 @@ def handle_message(message_text, sender_id):
     if '嗨' in message_text :
         if len(message_text ) < 10:
             return '你好！🙂\n請問我能為您做些什麼？ '
+        
+    if '/help' in message_text :
+        if len(message_text ) < 10:
+            return 'helppppppp!!! '
     
     #love
     if '男友' in message_text or '女友' in message_text :
